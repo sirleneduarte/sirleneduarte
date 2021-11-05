@@ -18,7 +18,9 @@
     "test": "CI=true react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
+    "lint": "./node_modules/.bin/eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "test:run": "jest"
   },
   "eslintConfig": {
     "extends": [
@@ -40,10 +42,5 @@
   },
   "devDependencies": {
     "husky": "^7.0.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run pretest"
-    }
- }
+  }
 }
